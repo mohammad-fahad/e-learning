@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import CourseData from '../../courseData/CourseData';
-import Cart from './Cart/Cart';
+import CourseData from '../courseData/CourseData';
+import Cart from '../Cart/Cart';
 
 
 
@@ -10,7 +10,6 @@ const Courses = () => {
     const [cart, setCart] = useState([]);
 
     const handleAdd = (cr) => {
-        console.log('clicked');
         const newCart = [...cart, cr];
         setCart(newCart);
 
@@ -25,22 +24,22 @@ const Courses = () => {
                             <div className="row ">
                                 <div className="col-md-3 d-flex">
                                     <img src={cour.image} className="card-img" alt="Course Image" />
-                                    
 
 
-                                    
+
+
                                 </div>
                                 <div className="col-xl-9">
-                                        <div className="card-body align-self-stretch">
-                                            <h1 className=" text-info">{cour.title}</h1>
-                                            <p className="card-text">{cour.body}</p>
-                                            <h5>Price: ${cour.price}</h5>
-                                            <button className="btn btn-success" onClick={() => handleAdd(cour)}>Enroll Now!</button>
-                                        </div>
+                                    <div className="card-body align-self-stretch">
+                                        <h1 className=" text-info">{cour.title}</h1>
+                                        <p className="card-text">{cour.body}</p>
+                                        <h5>Price: ${cour.price}</h5>
+                                        <button className="btn btn-success" onClick={() => handleAdd(cour)}>Enroll Now!</button>
                                     </div>
-                                
+                                </div>
+
                             </div>
-                            
+
 
                         </div>)
                 }

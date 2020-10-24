@@ -17,7 +17,7 @@ const Cart = (props) => {
             <button className="btn btn-success">Check Out</button>
             {
                 cart.map(crt =>
-                    <div className="card col-md-12" style={{ width: '16rem' }}>
+                    <div className="card col-md-12 mb 3" style={{ width: '16rem' }}>
                         <div className="card-body">
                             <img className="image-fluid" style={{ width: '100%' }} src={crt.image} alt=""/>
                             <h5 className="card-title">{crt.title}</h5>
